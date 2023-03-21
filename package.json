@@ -1,0 +1,27 @@
+{
+  "name": "ktun-deprem-bot",
+  "version": "1.0.0",
+  "description": "It is an earthquake boat that shows the latest earthquakes in Turkey by centering Konya Technical University and shows the distance according to their size and location and sends them as a notification to the person/group/channel.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "airquick",
+    "KOERI",
+    "KTUN",
+    "Konya Technical University"
+  ],
+  "author": "Ahmet H. Kablama",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "cheerio": "^1.0.0-rc.12",
+    "cron": "^2.2.0",
+    "dotenv": "^16.0.3",
+    "telegraf": "^4.11.2",
+    "telegraf-throttler": "^0.6.0"
+  }
+}
