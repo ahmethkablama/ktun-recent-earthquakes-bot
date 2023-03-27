@@ -144,7 +144,7 @@ async function setRecentEarthquakes() {
 
     RecentEarthquakes.push({ ...RecentEarthquakesData });  
 
-    ErrorSwitchEarlyEarthquake = 0;
+    ErrorSwitchRecentEarthquake = 0;
 
 }
 }
