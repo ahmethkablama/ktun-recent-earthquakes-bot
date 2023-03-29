@@ -164,14 +164,14 @@ const getEarthquakeNotificationJob = new CronJob('*/5 * * * * *', async () => { 
     
     if ( EarthquakeClock0thElement != RecentEarthquakes[a].hour && EarthquakeClock1thElement != RecentEarthquakes[a].hour && EarthquakeClock2thElement != RecentEarthquakes[a].hour && EarthquakeClock3thElement != RecentEarthquakes[a].hour && 
       EarthquakeClock4thElement != RecentEarthquakes[a].hour && EarthquakeClock5thElement != RecentEarthquakes[a].hour && EarthquakeClock6thElement != RecentEarthquakes[a].hour && EarthquakeClock7thElement != RecentEarthquakes[a].hour && 
-      RecentEarthquakes[a].magnitude >= 3.0) { 
+      RecentEarthquakes[a].magnitude >= 2.9) { 
         
       for (let i = 0; i < 8 ; i++) { NewEarthquakeQuery=i;
   
         if (EarthquakeClock0thElement != RecentEarthquakes[i].hour && EarthquakeClock1thElement != RecentEarthquakes[i].hour && EarthquakeClock2thElement != RecentEarthquakes[i].hour && EarthquakeClock3thElement != RecentEarthquakes[i].hour && 
             EarthquakeClock4thElement != RecentEarthquakes[i].hour && EarthquakeClock5thElement != RecentEarthquakes[i].hour && EarthquakeClock6thElement != RecentEarthquakes[i].hour && EarthquakeClock7thElement != RecentEarthquakes[i].hour) {
   
-          if (RecentEarthquakes[i].magnitude >= 3.0 && RecentEarthquakes[i].magnitude <= 3.8 && EarlyEarthquake[0].distance <= 100) { 
+          if (RecentEarthquakes[i].magnitude >= 2.9 && RecentEarthquakes[i].magnitude <= 3.8 && EarlyEarthquake[0].distance <= 100) { 
               //await (bot.telegram.sendMessage(process.env.TELEGRAM_ID, `${PublishTheLatestFirstEarthquake(RecentEarthquakes)}`, {disable_web_page_preview: true , disable_notification: false , parse_mode: 'Markdown'}));
               await (bot.telegram.sendPhoto(process.env.TELEGRAM_ID, `https://maps.googleapis.com/maps/api/staticmap?language=tr&region=US&zoom=8&size=650x345&scale=2&markers=anchor:center%7Cicon:https://www.teknovudu.com/medya/2023/03/46.png|${RecentEarthquakes[NewEarthquakeQuery].latitude},${RecentEarthquakes[NewEarthquakeQuery].longitude}&key=${process.env.GOOGLE_MAPS_API_TOKEN}_id=${process.env.GOOGLE_MAPS_ID}`, {caption: `${PublishTheLatestFirstEarthquake(RecentEarthquakes)}` , parse_mode: 'Markdown'}));
           }
@@ -181,12 +181,12 @@ const getEarthquakeNotificationJob = new CronJob('*/5 * * * * *', async () => { 
               await (bot.telegram.sendPhoto(process.env.TELEGRAM_ID, `https://maps.googleapis.com/maps/api/staticmap?language=tr&region=US&zoom=8&size=650x345&scale=2&markers=anchor:center%7Cicon:https://www.teknovudu.com/medya/2023/03/48.png|${RecentEarthquakes[NewEarthquakeQuery].latitude},${RecentEarthquakes[NewEarthquakeQuery].longitude}&key=${process.env.GOOGLE_MAPS_API_TOKEN}_id=${process.env.GOOGLE_MAPS_ID}`, {caption: `${PublishTheLatestFirstEarthquake(RecentEarthquakes)}` , parse_mode: 'Markdown'}));
           }
 
-          else if (RecentEarthquakes[i].magnitude >= 4.3 && RecentEarthquakes[i].magnitude <= 4.5 && EarlyEarthquake[0].distance <= 200) { 
+          else if (RecentEarthquakes[i].magnitude >= 4.3 && RecentEarthquakes[i].magnitude <= 4.5 && EarlyEarthquake[0].distance <= 220) { 
               //await (bot.telegram.sendMessage(process.env.TELEGRAM_ID, `${PublishTheLatestFirstEarthquake(RecentEarthquakes)}`, {disable_web_page_preview: true , disable_notification: false , parse_mode: 'Markdown'}));
               await (bot.telegram.sendPhoto(process.env.TELEGRAM_ID, `https://maps.googleapis.com/maps/api/staticmap?language=tr&region=US&zoom=8&size=650x345&scale=2&markers=anchor:center%7Cicon:https://www.teknovudu.com/medya/2023/03/50.png|${RecentEarthquakes[NewEarthquakeQuery].latitude},${RecentEarthquakes[NewEarthquakeQuery].longitude}&key=${process.env.GOOGLE_MAPS_API_TOKEN}_id=${process.env.GOOGLE_MAPS_ID}`, {caption: `${PublishTheLatestFirstEarthquake(RecentEarthquakes)}` , parse_mode: 'Markdown'}));
           }
 
-          else if (RecentEarthquakes[i].magnitude >= 4.6 && RecentEarthquakes[i].magnitude <= 4.9 && EarlyEarthquake[0].distance <= 200) { 
+          else if (RecentEarthquakes[i].magnitude >= 4.6 && RecentEarthquakes[i].magnitude <= 4.9 && EarlyEarthquake[0].distance <= 260) { 
               //await (bot.telegram.sendMessage(process.env.TELEGRAM_ID, `${PublishTheLatestFirstEarthquake(RecentEarthquakes)}`, {disable_web_page_preview: true , disable_notification: false , parse_mode: 'Markdown'}));
               await (bot.telegram.sendPhoto(process.env.TELEGRAM_ID, `https://maps.googleapis.com/maps/api/staticmap?language=tr&region=US&zoom=7&size=650x345&scale=2&markers=anchor:center%7Cicon:https://www.teknovudu.com/medya/2023/03/52.png|${RecentEarthquakes[NewEarthquakeQuery].latitude},${RecentEarthquakes[NewEarthquakeQuery].longitude}&key=${process.env.GOOGLE_MAPS_API_TOKEN}_id=${process.env.GOOGLE_MAPS_ID}`, {caption: `${PublishTheLatestFirstEarthquake(RecentEarthquakes)}` , parse_mode: 'Markdown'}));
           }
@@ -196,7 +196,7 @@ const getEarthquakeNotificationJob = new CronJob('*/5 * * * * *', async () => { 
               await (bot.telegram.sendPhoto(process.env.TELEGRAM_ID, `https://maps.googleapis.com/maps/api/staticmap?language=tr&region=US&zoom=7&size=650x345&scale=2&markers=anchor:center%7Cicon:https://www.teknovudu.com/medya/2023/03/54.png|${RecentEarthquakes[NewEarthquakeQuery].latitude},${RecentEarthquakes[NewEarthquakeQuery].longitude}&key=${process.env.GOOGLE_MAPS_API_TOKEN}_id=${process.env.GOOGLE_MAPS_ID}`, {caption: `⚠️  *GÜÇLÜ DEPREM UYARISI*  ⚠️\n${PublishTheLatestFirstEarthquake(RecentEarthquakes)}` , parse_mode: 'Markdown'}));
           }
 
-          else if (RecentEarthquakes[i].magnitude >= 5.5 && RecentEarthquakes[i].magnitude <= 5.9 && EarlyEarthquake[0].distance <= 600) { 
+          else if (RecentEarthquakes[i].magnitude >= 5.5 && RecentEarthquakes[i].magnitude <= 5.9 && EarlyEarthquake[0].distance <= 800) { 
               //await (bot.telegram.sendMessage(process.env.TELEGRAM_ID, `⚠️  *GÜÇLÜ DEPREM UYARISI*  ⚠️\n${PublishTheLatestFirstEarthquake(RecentEarthquakes)}`, {disable_web_page_preview: true , disable_notification: false , parse_mode: 'Markdown'}));
               await (bot.telegram.sendPhoto(process.env.TELEGRAM_ID, `https://maps.googleapis.com/maps/api/staticmap?language=tr&region=US&zoom=7&size=650x345&scale=2&markers=anchor:center%7Cicon:https://www.teknovudu.com/medya/2023/03/56.png|${RecentEarthquakes[NewEarthquakeQuery].latitude},${RecentEarthquakes[NewEarthquakeQuery].longitude}&key=${process.env.GOOGLE_MAPS_API_TOKEN}_id=${process.env.GOOGLE_MAPS_ID}`, {caption: `⚠️  *GÜÇLÜ DEPREM UYARISI*  ⚠️\n${PublishTheLatestFirstEarthquake(RecentEarthquakes)}` , parse_mode: 'Markdown'}));
           }
